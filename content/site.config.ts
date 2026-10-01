@@ -51,10 +51,10 @@ export type FeaturedVideo = {
 };
 
 export const featuredVideo: FeaturedVideo = {
-  youtubeId: null,
-  title: "The first Seestack breakdown",
+  youtubeId: "t_sOfWli9aU",
+  title: "Stop Re-explaining Your Project Every Session",
   description:
-    "Each breakdown starts with a problem worth solving, builds the system that solves it on screen, and ends with the parts you can lift into your own setup.",
+    "Claude Code forgets everything between sessions, so every new chat starts with you re-explaining your project. This breakdown builds the fix: an Obsidian vault holding the agent's memory, commands and skills as plain markdown, symlinked back so the agent reads them as its own — then tests whether a fresh session can pick up where the last one stopped.",
 };
 
 /** Public watch URL for a YouTube video ID. */
@@ -82,7 +82,7 @@ export function youtubeEmbedUrl(id: string): string {
  * URL to turn it into a working link.
  */
 export const links = {
-  youtube: null as string | null,
+  youtube: "https://www.youtube.com/@seestack" as string | null,
   github: "https://github.com/seestack-dev" as string | null,
   linkedin: null as string | null,
   /** A plain email address, without the `mailto:` prefix. */
@@ -121,6 +121,5 @@ export const emailSignup = {
   formAction: null as string | null,
   emailFieldName: "email",
   /** Shown under the form while `formAction` is null. */
-  disabledNote:
-    "Signup isn't open yet. The list opens alongside the first published system.",
+  disabledNote: "Signup isn't open yet.",
 };
