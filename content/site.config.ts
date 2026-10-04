@@ -86,7 +86,7 @@ export const links = {
   github: "https://github.com/seestack-dev" as string | null,
   linkedin: null as string | null,
   /** A plain email address, without the `mailto:` prefix. */
-  contactEmail: null as string | null,
+  contactEmail: "founder@seestack.dev" as string | null,
   /** Path or URL to a privacy policy, once one exists. */
   privacy: null as string | null,
 };
@@ -118,7 +118,7 @@ export const latestWatchHref: string = featuredVideo.youtubeId
  * provider expects a different field name than `email`, update `emailFieldName`.
  */
 export const emailSignup = {
-  formAction: null as string | null,
+  formAction: "https://buttondown.com/api/emails/embed-subscribe/seestack" as string | null,
   emailFieldName: "email",
   /** Shown under the form while `formAction` is null. */
   disabledNote: "Signup isn't open yet.",
