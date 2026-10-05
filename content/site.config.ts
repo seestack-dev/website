@@ -19,9 +19,9 @@ export const site = {
   name: "Seestack",
   /** Canonical origin. No trailing slash. */
   url: "https://www.seestack.dev",
-  tagline: "See how the system actually works.",
+  tagline: "Real AI workflows that actually run.",
   description:
-    "Explore real AI workflows, developer tools, and automation through working systems.",
+    "Real AI workflows, terminal coding agents, and Obsidian setups that actually run. Free open-source vaults, bash scripts, and architecture breakdowns.",
   author: "Said Nasser",
 } as const;
 
@@ -48,6 +48,7 @@ export type FeaturedVideo = {
   youtubeId: string | null;
   title: string;
   description: string;
+  repoUrl?: string | null;
 };
 
 export const featuredVideo: FeaturedVideo = {
@@ -55,6 +56,7 @@ export const featuredVideo: FeaturedVideo = {
   title: "Stop Re-explaining Your Project Every Session",
   description:
     "Claude Code forgets everything between sessions, so every new chat starts with you re-explaining your project. This breakdown builds the fix: an Obsidian vault holding the agent's memory, commands and skills as plain markdown, symlinked back so the agent reads them as its own — then tests whether a fresh session can pick up where the last one stopped.",
+  repoUrl: "https://github.com/seestack-dev/claude-obsidian-memory",
 };
 
 /** Public watch URL for a YouTube video ID. */
@@ -84,6 +86,7 @@ export function youtubeEmbedUrl(id: string): string {
 export const links = {
   youtube: "https://www.youtube.com/@seestack" as string | null,
   github: "https://github.com/seestack-dev" as string | null,
+  repo: "https://github.com/seestack-dev/claude-obsidian-memory" as string | null,
   linkedin: null as string | null,
   /** A plain email address, without the `mailto:` prefix. */
   contactEmail: "founder@seestack.dev" as string | null,

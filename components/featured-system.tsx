@@ -1,6 +1,6 @@
 import { featuredVideo, youtubeEmbedUrl, youtubeWatchUrl } from "@/content/site.config";
 import { ActionLink } from "./action-link";
-import { ExternalIcon, PlayIcon } from "./icons";
+import { ExternalIcon, GitHubIcon, PlayIcon } from "./icons";
 
 /**
  * The featured video slot. Everything it renders comes from `featuredVideo` in
@@ -8,7 +8,7 @@ import { ExternalIcon, PlayIcon } from "./icons";
  * replaced by a real embed and a working "Watch on YouTube" link.
  */
 export function FeaturedSystem() {
-  const { youtubeId, title, description } = featuredVideo;
+  const { youtubeId, title, description, repoUrl } = featuredVideo;
 
   return (
     <section id="videos" className="border-hair border-t">
@@ -39,25 +39,62 @@ export function FeaturedSystem() {
             <p className="text-muted font-mono text-xs">
               {youtubeId ? `youtube · ${youtubeId}` : "video slot · awaiting first upload"}
             </p>
-            {youtubeId ? (
-              <ActionLink
-                href={youtubeWatchUrl(youtubeId)}
-                className="btn btn-secondary btn-sm self-start sm:self-auto"
-              >
-                Watch on YouTube
-                <ExternalIcon />
-              </ActionLink>
-            ) : (
-              <span
-                className="btn btn-sm btn-inert self-start sm:self-auto"
-                aria-disabled="true"
-              >
-                Watch on YouTube
-                <ExternalIcon />
-              </span>
-            )}
+            <div className="flex flex-wrap items-center gap-3">
+              {repoUrl && (
+                <ActionLink
+                  href={repoUrl}
+                  className="btn btn-primary btn-sm self-start sm:self-auto"
+                >
+                  <GitHubIcon />
+                  Get the Vault
+                  <ExternalIcon />
+                </ActionLink>
+              )}
+              {youtubeId ? (
+                <ActionLink
+                  href={youtubeWatchUrl(youtubeId)}
+                  className="btn btn-secondary btn-sm self-start sm:self-auto"
+                >
+                  Watch on YouTube
+                  <ExternalIcon />
+                </ActionLink>
+              ) : (
+                <span
+                  className="btn btn-sm btn-inert self-start sm:self-auto"
+                  aria-disabled="true"
+                >
+                  Watch on YouTube
+                  <ExternalIcon />
+                </span>
+              )}
+            </div>
           </div>
         </div>
+
+        {repoUrl && (
+          <div className="panel mt-6 flex flex-col justify-between gap-6 p-6 sm:flex-row sm:items-center sm:p-7">
+            <div>
+              <div className="flex items-center gap-2">
+                <span className="eyebrow text-accent">Open-Source Vault</span>
+                <span className="text-muted font-mono text-xs">MIT License</span>
+              </div>
+              <h3 className="text-cream mt-2 text-xl font-semibold tracking-[-0.01em]">
+                Claude Obsidian Memory
+              </h3>
+              <p className="text-cream-dim mt-2 max-w-xl text-sm leading-relaxed">
+                The persistent context and auto-memory system for Claude Code. Includes daily journal automations, bash scripts, and symlink topology.
+              </p>
+            </div>
+            <ActionLink
+              href={repoUrl}
+              className="btn btn-primary self-start whitespace-nowrap sm:self-center"
+            >
+              <GitHubIcon />
+              Star & Clone on GitHub
+              <ExternalIcon />
+            </ActionLink>
+          </div>
+        )}
       </div>
     </section>
   );
