@@ -87,7 +87,7 @@ export const links = {
   youtube: "https://www.youtube.com/@seestack" as string | null,
   github: "https://github.com/seestack-dev" as string | null,
   repo: "https://github.com/seestack-dev/claude-obsidian-memory" as string | null,
-  cal: "https://cal.com/seestack" as string | null,
+  cal: "https://cal.com/seestack/ai-setup" as string | null,
   linkedin: null as string | null,
   /** A plain email address, without the `mailto:` prefix. */
   contactEmail: "founder@seestack.dev" as string | null,
