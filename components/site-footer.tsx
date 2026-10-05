@@ -83,6 +83,11 @@ export function SiteFooter() {
           </FooterColumn>
 
           <FooterColumn title="More">
+            {links.cal && (
+              <li>
+                <FooterLink label="Book 1-on-1 Setup" href={links.cal} />
+              </li>
+            )}
             <li>
               <FooterLink label="Privacy" href={links.privacy} />
             </li>

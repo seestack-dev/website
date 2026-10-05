@@ -1,4 +1,4 @@
-import { latestWatchHref, nav } from "@/content/site.config";
+import { latestWatchHref, links, nav } from "@/content/site.config";
 import { ActionLink } from "./action-link";
 import { PlayIcon } from "./icons";
 import { MobileNav } from "./mobile-nav";
@@ -28,6 +28,14 @@ export function SiteHeader() {
         </nav>
 
         <div className="flex items-center gap-2">
+          {links.cal && (
+            <ActionLink
+              href={links.cal}
+              className="btn btn-secondary btn-sm hidden sm:inline-flex"
+            >
+              Book 1-on-1
+            </ActionLink>
+          )}
           <ActionLink
             href={latestWatchHref}
             className="btn btn-primary btn-sm hidden md:inline-flex"

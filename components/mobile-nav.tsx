@@ -1,7 +1,7 @@
 "use client";
 
 import { useEffect, useState } from "react";
-import { latestWatchHref, nav } from "@/content/site.config";
+import { latestWatchHref, links, nav } from "@/content/site.config";
 import { ActionLink } from "./action-link";
 import { PlayIcon } from "./icons";
 
@@ -76,6 +76,15 @@ export function MobileNav() {
             <PlayIcon />
             Watch the latest
           </ActionLink>
+          {links.cal && (
+            <ActionLink
+              href={links.cal}
+              onClick={() => setOpen(false)}
+              className="btn btn-secondary mt-2 w-full"
+            >
+              Book 1-on-1 Setup
+            </ActionLink>
+          )}
         </nav>
       </div>
     </div>
