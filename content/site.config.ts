@@ -52,8 +52,8 @@ export type FeaturedVideo = {
 };
 
 export const featuredVideo: FeaturedVideo = {
-  youtubeId: null,
-  title: "Persistent Context & Memory for Coding Agents",
+  youtubeId: "lE1EUYn3IGY",
+  title: "Claude Code + Obsidian: Change How AI Memory Works",
   description:
     "Claude Code forgets everything between sessions, so every new chat starts with you re-explaining your project. This architecture builds the fix: an Obsidian vault holding the agent's memory, commands and skills as plain markdown, symlinked back so the agent reads them as its own.",
   repoUrl: "https://github.com/see-stack/claude-obsidian-memory",
