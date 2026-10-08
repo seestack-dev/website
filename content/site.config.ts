@@ -23,6 +23,7 @@ export const site = {
   description:
     "Real AI workflows, terminal coding agents, and Obsidian setups that actually run. Free open-source vaults, bash scripts, and architecture breakdowns.",
   author: "Said Nasser",
+  role: "Founder & Lead Engineer",
 } as const;
 
 /** Primary navigation. Each `href` must match an `id` rendered on the page. */
@@ -86,9 +87,10 @@ export function youtubeEmbedUrl(id: string): string {
 export const links = {
   youtube: "https://www.youtube.com/@seestack" as string | null,
   github: "https://github.com/see-stack" as string | null,
+  instagram: "https://instagram.com/see.stack" as string | null,
   repo: "https://github.com/see-stack/claude-obsidian-memory" as string | null,
   cal: "https://cal.com/seestack/ai-setup" as string | null,
-  linkedin: null as string | null,
+  linkedin: "https://linkedin.com/in/said-nasser/" as string | null,
   /** A plain email address, without the `mailto:` prefix. */
   contactEmail: "founder@seestack.dev" as string | null,
   /** Path or URL to a privacy policy, once one exists. */

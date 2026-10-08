@@ -80,6 +80,9 @@ export function SiteFooter() {
             <li>
               <FooterLink label="LinkedIn" href={links.linkedin} />
             </li>
+            <li>
+              <FooterLink label="Instagram" href={links.instagram} />
+            </li>
           </FooterColumn>
 
           <FooterColumn title="More">
@@ -104,7 +107,9 @@ export function SiteFooter() {
           <p className="text-muted font-mono text-xs">
             © {year} {site.name}
           </p>
-          <p className="text-muted font-mono text-xs">Built by {site.author}</p>
+          <p className="text-muted font-mono text-xs">
+            Founded & engineered by {site.author}
+          </p>
         </div>
       </div>
     </footer>

@@ -10,25 +10,28 @@ export function About() {
           <div>
             <p className="eyebrow">About</p>
             <h2 className="text-cream mt-4 text-3xl font-semibold tracking-[-0.015em] sm:text-4xl">
-              Seestack is built by {site.author}.
+              Seestack is founded & engineered by {site.author}.
             </h2>
+            <p className="text-accent mt-2 font-mono text-xs uppercase tracking-wider">
+              {site.role}
+            </p>
           </div>
 
           <div className="text-cream-dim max-w-2xl space-y-5 leading-relaxed lg:pt-1">
             <p>
-              The systems come out of real software engineering work and the AI
-              tooling used to do it day to day — the same setups, running on
-              real projects, with the rough edges left visible.
+              Seestack is an independent engineering lab and developer tooling
+              studio focused on autonomous coding agents, persistent memory
+              architectures, and verifiable terminal workflows.
             </p>
             <p>
-              That is the whole editorial rule: if something has not been built
-              and run, it does not get published here. What gets demonstrated is
-              what is actually in use, including the parts that are still
-              awkward.
+              The systems come out of real production engineering work and the
+              AI tooling used to ship code day to day — running live on actual
+              projects with the rough edges left visible.
             </p>
             <p>
-              Seestack is a one-person operation right now. Any tools it
-              releases will show up on this page when they exist, not before.
+              The editorial rule is strict: if a workflow or tool has not been
+              built, run, and battle-tested in a live terminal, it does not get
+              published here. Zero wrappers, plain markdown, verifiable runs.
             </p>
 
             {links.cal && (
