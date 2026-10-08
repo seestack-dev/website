@@ -87,6 +87,7 @@ export const links = {
   youtube: "https://www.youtube.com/@seestack" as string | null,
   github: "https://github.com/see-stack" as string | null,
   instagram: "https://instagram.com/see.stack" as string | null,
+  x: "https://x.com/seestackx" as string | null,
   repo: "https://github.com/see-stack/claude-obsidian-memory" as string | null,
   cal: "https://cal.com/seestack/ai-setup" as string | null,
   linkedin: "https://linkedin.com/in/said-nasser/" as string | null,

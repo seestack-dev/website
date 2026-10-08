@@ -83,6 +83,9 @@ export function SiteFooter() {
             <li>
               <FooterLink label="Instagram" href={links.instagram} />
             </li>
+            <li>
+              <FooterLink label="X" href={links.x} />
+            </li>
           </FooterColumn>
 
           <FooterColumn title="More">
