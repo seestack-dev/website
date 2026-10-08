@@ -56,7 +56,7 @@ export const featuredVideo: FeaturedVideo = {
   title: "Persistent Context & Memory for Coding Agents",
   description:
     "Claude Code forgets everything between sessions, so every new chat starts with you re-explaining your project. This architecture builds the fix: an Obsidian vault holding the agent's memory, commands and skills as plain markdown, symlinked back so the agent reads them as its own.",
-  repoUrl: "https://github.com/seestack-dev/claude-obsidian-memory",
+  repoUrl: "https://github.com/see-stack/claude-obsidian-memory",
 };
 
 /** Public watch URL for a YouTube video ID. */
@@ -85,8 +85,8 @@ export function youtubeEmbedUrl(id: string): string {
  */
 export const links = {
   youtube: "https://www.youtube.com/@seestack" as string | null,
-  github: "https://github.com/seestack-dev" as string | null,
-  repo: "https://github.com/seestack-dev/claude-obsidian-memory" as string | null,
+  github: "https://github.com/see-stack" as string | null,
+  repo: "https://github.com/see-stack/claude-obsidian-memory" as string | null,
   cal: "https://cal.com/seestack/ai-setup" as string | null,
   linkedin: null as string | null,
   /** A plain email address, without the `mailto:` prefix. */
