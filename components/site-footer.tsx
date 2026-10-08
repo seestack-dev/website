@@ -86,6 +86,9 @@ export function SiteFooter() {
             <li>
               <FooterLink label="X" href={links.x} />
             </li>
+            <li>
+              <FooterLink label="Bluesky" href={links.bsky} />
+            </li>
           </FooterColumn>
 
           <FooterColumn title="More">

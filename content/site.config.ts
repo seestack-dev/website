@@ -88,6 +88,7 @@ export const links = {
   github: "https://github.com/see-stack" as string | null,
   instagram: "https://instagram.com/see.stack" as string | null,
   x: "https://x.com/seestackx" as string | null,
+  bsky: "https://bsky.app/profile/seestack.bsky.social" as string | null,
   repo: "https://github.com/see-stack/claude-obsidian-memory" as string | null,
   cal: "https://cal.com/seestack/ai-setup" as string | null,
   linkedin: "https://www.linkedin.com/company/seestack/" as string | null,
