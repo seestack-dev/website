@@ -22,8 +22,7 @@ export const site = {
   tagline: "Real AI workflows that actually run.",
   description:
     "Real AI workflows, terminal coding agents, and Obsidian setups that actually run. Free open-source vaults, bash scripts, and architecture breakdowns.",
-  author: "Said Nasser",
-  role: "Founder & Lead Engineer",
+  author: "Seestack",
 } as const;
 
 /** Primary navigation. Each `href` must match an `id` rendered on the page. */

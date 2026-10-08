@@ -10,10 +10,10 @@ export function About() {
           <div>
             <p className="eyebrow">About</p>
             <h2 className="text-cream mt-4 text-3xl font-semibold tracking-[-0.015em] sm:text-4xl">
-              Seestack is founded & engineered by {site.author}.
+              About Seestack.
             </h2>
             <p className="text-accent mt-2 font-mono text-xs uppercase tracking-wider">
-              {site.role}
+              Engineering Lab · Developer Tooling Studio
             </p>
           </div>
 

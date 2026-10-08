@@ -108,7 +108,7 @@ export function SiteFooter() {
             © {year} {site.name}
           </p>
           <p className="text-muted font-mono text-xs">
-            Founded & engineered by {site.author}
+            Built by Seestack
           </p>
         </div>
       </div>
