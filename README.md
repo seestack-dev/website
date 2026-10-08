@@ -90,7 +90,7 @@ YouTube.
 ```ts
 export const links = {
   youtube: null,                              // ← replace with a real URL
-  github: "https://github.com/seestack-dev",
+  github: "https://github.com/seestacks",
   linkedin: null,
   contactEmail: null,                         // plain address, no "mailto:"
   privacy: null,
@@ -199,7 +199,7 @@ needed.
 
 ### First deploy
 
-1. Import `seestack-dev/website` at [vercel.com/new](https://vercel.com/new).
+1. Import `seestacks/website` at [vercel.com/new](https://vercel.com/new).
 2. Accept the detected defaults (build `next build`, output `.next`).
 3. Deploy.
 
