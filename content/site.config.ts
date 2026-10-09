@@ -91,7 +91,7 @@ export const links = {
   bsky: "https://bsky.app/profile/seestack.bsky.social" as string | null,
   repo: "https://github.com/see-stack/claude-obsidian-memory" as string | null,
   cal: "https://cal.com/seestack/ai-setup" as string | null,
-  store: "https://seestack.lemonsqueezy.com" as string | null,
+  store: "https://seestack.lemonsqueezy.com/checkout/buy/88579484-e60b-4831-8aac-ac3af1c28010" as string | null,
   linkedin: "https://www.linkedin.com/company/seestack/" as string | null,
   /** A plain email address, without the `mailto:` prefix. */
   contactEmail: "founder@seestack.dev" as string | null,
