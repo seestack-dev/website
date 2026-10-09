@@ -36,13 +36,22 @@ export function FeaturedSystem() {
                 youtube · {youtubeId}
               </p>
               <div className="flex flex-wrap items-center gap-3">
+                {links.store && (
+                  <ActionLink
+                    href={links.store}
+                    className="btn btn-primary btn-sm self-start sm:self-auto"
+                  >
+                    Get Pro Kit ($19)
+                    <ExternalIcon />
+                  </ActionLink>
+                )}
                 {repoUrl && (
                   <ActionLink
                     href={repoUrl}
-                    className="btn btn-primary btn-sm self-start sm:self-auto"
+                    className="btn btn-secondary btn-sm self-start sm:self-auto"
                   >
                     <GitHubIcon />
-                    Get the Vault
+                    Open Source
                     <ExternalIcon />
                   </ActionLink>
                 )}
@@ -62,20 +71,29 @@ export function FeaturedSystem() {
           <div className={`panel ${youtubeId ? "mt-6" : "mt-10"} flex flex-col justify-between gap-6 p-6 sm:flex-row sm:items-center sm:p-7`}>
             <div>
               <div className="flex items-center gap-2">
-                <span className="eyebrow text-accent">Open-Source Vault</span>
-                <span className="text-muted font-mono text-xs">MIT License</span>
+                <span className="eyebrow text-accent">Turnkey System</span>
+                <span className="text-muted font-mono text-xs">Starter Kit & Open-Source</span>
               </div>
               <h3 className="text-cream mt-2 text-xl font-semibold tracking-[-0.01em]">
-                Claude Obsidian Memory
+                Claude Obsidian Memory (Pro Kit)
               </h3>
               <p className="text-cream-dim mt-2 max-w-xl text-sm leading-relaxed">
-                The persistent context and auto-memory system for Claude Code. Includes daily journal automations, bash scripts, and symlink topology.
+                The persistent context and auto-memory system for Claude Code. Includes 1-click installer, expanded agent skills, daily journal automations, and dark-mode graph styling.
               </p>
             </div>
             <div className="flex flex-wrap items-center gap-3">
+              {links.store && (
+                <ActionLink
+                  href={links.store}
+                  className="btn btn-primary self-start whitespace-nowrap sm:self-center"
+                >
+                  Get Pro Kit ($19)
+                  <ExternalIcon />
+                </ActionLink>
+              )}
               <ActionLink
                 href={repoUrl}
-                className="btn btn-primary self-start whitespace-nowrap sm:self-center"
+                className="btn btn-secondary self-start whitespace-nowrap sm:self-center"
               >
                 <GitHubIcon />
                 Star & Clone on GitHub

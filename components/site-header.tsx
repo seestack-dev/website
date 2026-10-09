@@ -28,6 +28,14 @@ export function SiteHeader() {
         </nav>
 
         <div className="flex items-center gap-2">
+          {links.store && (
+            <ActionLink
+              href={links.store}
+              className="btn btn-secondary btn-sm"
+            >
+              Pro Kit ($19)
+            </ActionLink>
+          )}
           {links.cal && (
             <ActionLink
               href={links.cal}
