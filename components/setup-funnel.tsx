@@ -65,15 +65,20 @@ export function SetupFunnel({ id = "setup" }: { id?: string }) {
         {!submitted ? (
           <div className="panel bg-ink-raised relative overflow-hidden px-6 py-12 sm:px-12 sm:py-16 shadow-2xl">
             <div className="mx-auto max-w-xl text-center">
-              <p className="eyebrow inline-block">⚡ FREE DEVELOPER ACCESS</p>
+              <div className="inline-flex items-center gap-2 rounded-full border border-red-500/30 bg-red-500/10 px-4 py-1.5 text-xs font-semibold text-red-400 mb-4">
+                <svg viewBox="0 0 16 16" className="w-3.5 h-3.5 fill-current" aria-hidden="true">
+                  <path d="M5.2 3.3a.7.7 0 0 1 1.06-.6l6 4.1a.7.7 0 0 1 0 1.16l-6 4.34a.7.7 0 0 1-1.06-.6V3.3Z" />
+                </svg>
+                SUBSCRIBE TO UNLOCK SCRIPTS
+              </div>
               
-              <h2 className="text-cream mt-4 text-3xl font-semibold tracking-[-0.02em] sm:text-4xl">
+              <h2 className="text-cream text-3xl font-bold tracking-[-0.02em] sm:text-4xl">
                 Subscribe to Get the Script & Custom Mods
               </h2>
               
-              <p className="text-cream-dim mt-4 text-base leading-relaxed">
-                Enter your name and email to subscribe for free weekly tools and unlock
-                the one-line install command, context-bar mod, and Obsidian vault instantly.
+              <p className="text-cream-dim mt-3 text-base leading-relaxed">
+                Enter your name and email below. Subscribing gives you free weekly developer tools
+                and unlocks the one-line install command, context-bar mod, and Obsidian vault instantly.
               </p>
 
               <form onSubmit={handleSubmit} className="mt-8 flex flex-col gap-4 text-left">
@@ -88,7 +93,7 @@ export function SetupFunnel({ id = "setup" }: { id?: string }) {
                     value={name}
                     onChange={(e) => setName(e.target.value)}
                     placeholder="e.g. Alex"
-                    className="border-hair-hi bg-panel text-cream placeholder:text-muted focus:border-accent w-full rounded-lg border px-4 py-3 text-sm transition-colors outline-none"
+                    className="border-hair-hi bg-panel text-cream placeholder:text-muted focus:border-red-500 w-full rounded-lg border px-4 py-3 text-sm transition-colors outline-none"
                   />
                 </div>
 
@@ -104,7 +109,7 @@ export function SetupFunnel({ id = "setup" }: { id?: string }) {
                     value={email}
                     onChange={(e) => setEmail(e.target.value)}
                     placeholder="alex@example.com"
-                    className="border-hair-hi bg-panel text-cream placeholder:text-muted focus:border-accent w-full rounded-lg border px-4 py-3 text-sm transition-colors outline-none"
+                    className="border-hair-hi bg-panel text-cream placeholder:text-muted focus:border-red-500 w-full rounded-lg border px-4 py-3 text-sm transition-colors outline-none"
                   />
                 </div>
 
@@ -113,13 +118,16 @@ export function SetupFunnel({ id = "setup" }: { id?: string }) {
                 <button
                   type="submit"
                   disabled={loading}
-                  className="btn btn-primary mt-3 w-full py-3.5 text-base font-semibold cursor-pointer disabled:opacity-50 flex items-center justify-center gap-2"
+                  className="mt-3 w-full py-4 px-6 text-base font-bold cursor-pointer disabled:opacity-50 flex items-center justify-center gap-2.5 rounded-xl bg-red-600 hover:bg-red-500 text-white shadow-lg shadow-red-600/30 transition-all transform hover:scale-[1.01] active:scale-[0.99]"
                 >
                   {loading ? (
                     "Subscribing & Preparing Setup..."
                   ) : (
                     <>
-                      <span>Subscribe & Get the Script</span>
+                      <svg viewBox="0 0 16 16" className="w-5 h-5 fill-current" aria-hidden="true">
+                        <path d="M5.2 3.3a.7.7 0 0 1 1.06-.6l6 4.1a.7.7 0 0 1 0 1.16l-6 4.34a.7.7 0 0 1-1.06-.6V3.3Z" />
+                      </svg>
+                      <span>SUBSCRIBE & GET THE SCRIPT</span>
                       <span>→</span>
                     </>
                   )}
