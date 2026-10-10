@@ -34,9 +34,17 @@ export function SetupFunnel({ id = "setup" }: { id?: string }) {
         throw new Error("Failed to subscribe");
       }
 
+      // Open YouTube channel with subscription confirmation in a new tab
+      if (typeof window !== "undefined") {
+        window.open(YOUTUBE_SUB_URL, "_blank");
+      }
+
       setSubmitted(true);
     } catch {
       // Still show the user the script so they are never blocked
+      if (typeof window !== "undefined") {
+        window.open(YOUTUBE_SUB_URL, "_blank");
+      }
       setSubmitted(true);
     } finally {
       setLoading(false);
@@ -60,12 +68,12 @@ export function SetupFunnel({ id = "setup" }: { id?: string }) {
               <p className="eyebrow inline-block">⚡ FREE DEVELOPER ACCESS</p>
               
               <h2 className="text-cream mt-4 text-3xl font-semibold tracking-[-0.02em] sm:text-4xl">
-                Get the Claude Code Setup & Custom Mods
+                Subscribe to Get the Script & Custom Mods
               </h2>
               
               <p className="text-cream-dim mt-4 text-base leading-relaxed">
-                Enter your details below to unlock the one-line install command,
-                the live context-bar HUD mod, and the complete Obsidian memory vault.
+                Enter your name and email to subscribe for free weekly tools and unlock
+                the one-line install command, context-bar mod, and Obsidian vault instantly.
               </p>
 
               <form onSubmit={handleSubmit} className="mt-8 flex flex-col gap-4 text-left">
@@ -105,13 +113,20 @@ export function SetupFunnel({ id = "setup" }: { id?: string }) {
                 <button
                   type="submit"
                   disabled={loading}
-                  className="btn btn-primary mt-3 w-full py-3.5 text-base font-semibold cursor-pointer disabled:opacity-50"
+                  className="btn btn-primary mt-3 w-full py-3.5 text-base font-semibold cursor-pointer disabled:opacity-50 flex items-center justify-center gap-2"
                 >
-                  {loading ? "Preparing Your Setup..." : "Get the Script & Vault →"}
+                  {loading ? (
+                    "Subscribing & Preparing Setup..."
+                  ) : (
+                    <>
+                      <span>Subscribe & Get the Script</span>
+                      <span>→</span>
+                    </>
+                  )}
                 </button>
 
                 <p className="text-muted text-center text-xs font-mono mt-2">
-                  🔒 Zero spam. One-click unsubscribe anytime.
+                  🔒 Instant access on next screen. Unsubscribe anytime with 1 click.
                 </p>
               </form>
             </div>
@@ -124,10 +139,10 @@ export function SetupFunnel({ id = "setup" }: { id?: string }) {
                 ✓
               </span>
               <h2 className="text-cream text-3xl font-bold tracking-tight sm:text-4xl">
-                Thanks, {name ? name.trim() : "Developer"}!
+                Thanks for subscribing, {name ? name.trim() : "Developer"}!
               </h2>
               <p className="text-cream-dim mt-2 text-base">
-                Your setup commands are ready. Copy the script below to install it immediately:
+                Your setup commands are ready below. Copy and run the script in your terminal:
               </p>
             </div>
 
