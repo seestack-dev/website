@@ -24,14 +24,13 @@ export function Hero() {
           </p>
 
           <div className="mt-9 flex flex-col gap-3 sm:flex-row sm:items-center">
-            <ActionLink href={latestWatchHref} className="btn btn-primary">
-              <PlayIcon />
-              Watch the latest breakdown
-            </ActionLink>
-            <a href="#systems" className="btn btn-secondary group">
-              Explore the systems
-              <ArrowIcon className="h-[1em] w-[1em] transition-transform duration-150 group-hover:translate-x-0.5" />
+            <a href="/setup" className="btn btn-primary">
+              ⚡ Get Setup Script & Mods
             </a>
+            <ActionLink href={latestWatchHref} className="btn btn-secondary">
+              <PlayIcon />
+              Watch breakdown
+            </ActionLink>
           </div>
         </div>
 

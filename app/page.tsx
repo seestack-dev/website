@@ -1,5 +1,5 @@
 import { About } from "@/components/about";
-import { EmailInterest } from "@/components/email-interest";
+import { SetupFunnel } from "@/components/setup-funnel";
 import { FeaturedSystem } from "@/components/featured-system";
 import { Hero } from "@/components/hero";
 import { Method } from "@/components/method";
@@ -17,7 +17,7 @@ export default function Home() {
         <SystemsLibrary />
         <Method />
         <About />
-        <EmailInterest />
+        <SetupFunnel id="subscribe" />
       </main>
       <SiteFooter />
     </>
